@@ -104,7 +104,7 @@ async def periodic_task():
         await send_data_to_channel(filtered_data, selected_teams)
 
         # Sleep for two seconds (adjust as needed)
-        await asyncio.sleep(12)
+        await asyncio.sleep(30)
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
@@ -112,5 +112,4 @@ async def bot_start(message: types.Message):
     asyncio.create_task(periodic_task())
 
     await message.answer(f"Salom, {message.from_user.full_name}! I will send you the data every two seconds.")
-
 
