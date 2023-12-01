@@ -104,7 +104,7 @@ async def periodic_task():
         await send_data_to_channel(filtered_data, selected_teams)
 
         # Sleep for two seconds (adjust as needed)
-        await asyncio.sleep(5)
+        await asyncio.sleep(10)
 
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
